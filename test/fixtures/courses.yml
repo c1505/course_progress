@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_estimate: 1
+  time_completed: 1
+  complete: false
+  title: MyText
+  curriculum: 1
+
+two:
+  time_estimate: 1
+  time_completed: 1
+  complete: false
+  title: MyText
+  curriculum: 1

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time estimate:</strong>
+  <%= @section.time_estimate %>
+</p>
+
+<p>
+  <strong>Time completed:</strong>
+  <%= @section.time_completed %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @section.complete %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @section.title %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @section.course.title %>
+</p>
+
+<p>
+  <strong>sub_sections:</strong>
+  <% @section.sub_sections.each do |f| %>
+  <%= f.title %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time estimate:</strong>
+  <%= @sub_section.time_estimate %>
+</p>
+
+<p>
+  <strong>Time completed:</strong>
+  <%= @sub_section.time_completed %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @sub_section.complete %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @sub_section.title %>
+</p>
+
+
+
+<p>
+  <strong>Section:</strong>
+  <%= @sub_section.section.title %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @sub_section.section.course.title %>
+</p>
+
+<p>
+  <strong>curriculum:</strong>
+  <%= @sub_section.section.course.curriculum.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_sub_section_path(@sub_section) %> |
+<%= link_to 'Back', sub_sections_path %>

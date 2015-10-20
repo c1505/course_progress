@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time estimate:</strong>
+  <%= @course.time_estimate %>
+</p>
+
+<p>
+  <strong>Time completed:</strong>
+  <%= @course.time_completed %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @course.complete %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @course.title %>
+</p>
+
+<p>
+  <strong>Curriculum:</strong>
+  <%= @course.curriculum %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

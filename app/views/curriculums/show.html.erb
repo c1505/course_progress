@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time estimate:</strong>
+  <%= @curriculum.time_estimate %>
+</p>
+
+<p>
+  <strong>Time completed:</strong>
+  <%= @curriculum.time_completed %>
+</p>
+
+<p>
+  <strong>Complete:</strong>
+  <%= @curriculum.complete %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @curriculum.title %>
+</p>
+
+<%= link_to 'Edit', edit_curriculum_path(@curriculum) %> |
+<%= link_to 'Back', curriculums_path %>

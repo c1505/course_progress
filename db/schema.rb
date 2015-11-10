@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20151020012118) do
     t.datetime "updated_at",     null: false
   end
 
+  add_index "courses", ["curriculum_id"], name: "index_courses_on_curriculum_id"
+
   create_table "curriculums", force: :cascade do |t|
     t.integer  "time_estimate"
     t.integer  "time_completed"
@@ -42,6 +44,8 @@ ActiveRecord::Schema.define(version: 20151020012118) do
     t.datetime "updated_at",     null: false
   end
 
+  add_index "sections", ["course_id"], name: "index_sections_on_course_id"
+
   create_table "sub_sections", force: :cascade do |t|
     t.integer  "time_estimate"
     t.integer  "time_completed"
@@ -51,5 +55,7 @@ ActiveRecord::Schema.define(version: 20151020012118) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
+
+  add_index "sub_sections", ["section_id"], name: "index_sub_sections_on_section_id"
 
 end

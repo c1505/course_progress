@@ -20,15 +20,11 @@
   <%= @section.title %>
 </p>
 
-<p>
-  <strong>Course:</strong>
-  <%= @section.course.title %>
-</p>
 
 <p>
-  <strong>sub_sections:</strong>
+  <strong>sub_sections:        Time Estimate(minutes)</strong>
   <% @section.sub_sections.each do |f| %>
-  <%= f.title %>
+  <p><%= f.title%>  <%= f.time_estimate %></p>
   <% end %>
 </p>
 

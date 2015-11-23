@@ -1,5 +1,5 @@
 class SectionsController < ApplicationController
-  before_action :set_section, only: [:show, :edit, :update, :destroy]
+  before_action :set_section, :set_course, only: [:show, :edit, :update, :destroy]
 
   # GET /sections
   # GET /sections.json
@@ -42,6 +42,7 @@ class SectionsController < ApplicationController
   def update
     respond_to do |format|
       if @section.update(section_params)
+        @course.update_attribute(:time_estimate, @course.sections.map {|f| f.time_estimate}.compact.reduce(:+))
         format.html { redirect_to @section, notice: 'Section was successfully updated.' }
         format.json { render :show, status: :ok, location: @section }
       else
@@ -65,6 +66,10 @@ class SectionsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_section
       @section = Section.find(params[:id])
+    end
+    
+    def set_course
+      @course = @section.course
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

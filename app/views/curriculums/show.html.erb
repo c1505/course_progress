@@ -11,7 +11,7 @@
         </script>
     </head>
     <body>
-        <h1><b>Demo ExpandableList</b></h1>
+        <h1><b><%= @curriculum.title %></b></h1>
         <div id="listContainer">
             <div class="listControl">
                 <a id="expandList">Expand All</a>
@@ -42,35 +42,6 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Time estimate:</strong>
-  <%= @curriculum.time_estimate %>
-</p>
-
-<p>
-  <strong>Time completed:</strong>
-  <%= @curriculum.time_completed %>
-</p>
-
-<p>
-  <strong>Complete:</strong>
-  <%= @curriculum.complete %>
-</p>
-
-<h1>
-  <strong>Title: <%= @curriculum.title %></strong>
-  
-</h1>
-
-<p>
-  
-  <% @curriculum.courses.each do |f| %>
-  <h3><%= link_to "#{f.title}", courses_path %></h3>
-    <% f.sections.each do |f| %>
-      <p><%= f.title %></p>
-    <% end %>
-  <%end %>
-</p>
 
 
 

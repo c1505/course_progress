@@ -19,16 +19,14 @@
             </div>
             <ul id="expList">
                 
-            <% @curriculum.courses.each do |f| %>
-              <li><h3><%= link_to "#{f.title}", courses_path %></h3>
-                      
+            <% @curriculum.courses.each do |course| %>
+              <li><h3><%= link_to "#{course.title}", course %>(<%= course.time_estimate %>)</h3>
                     <ul>
-      
-                            <% f.sections.each do |f| %>
-                             <li><%= link_to "#{f.title}", sections_path %></li>
-                            <% end %>
+                            <% course.sections.each do |section| %>
+                             <li><%= link_to "#{section.title}", section %>(<%= section.time_estimate %>)</li>
+                        <% end %>
                     </ul>
-                            <%end %>
+                      <%end %>
           
                     
               </li>

@@ -1,5 +1,6 @@
 class SubSectionsController < ApplicationController
   before_action :set_sub_section, only: [:show, :edit, :update, :destroy]
+  http_basic_authenticate_with name: "dhh", password: (Rails.application.secrets.basic_auth), except: [:index, :show]
 
   # GET /sub_sections
   # GET /sub_sections.json

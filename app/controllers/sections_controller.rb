@@ -1,5 +1,6 @@
 class SectionsController < ApplicationController
   before_action :set_section, :set_course, only: [:show, :edit, :update, :destroy]
+  http_basic_authenticate_with name: "dhh", password: (Rails.application.secrets.basic_auth), except: [:index, :show]
 
   # GET /sections
   # GET /sections.json

@@ -1,6 +1,6 @@
 class CurriculumsController < ApplicationController
   before_action :set_curriculum, only: [:show, :edit, :update, :destroy]
-
+  http_basic_authenticate_with name: "dhh", password: (Rails.application.secrets.basic_auth), except: [:index, :show]
   # GET /curriculums
   # GET /curriculums.json
   def index
